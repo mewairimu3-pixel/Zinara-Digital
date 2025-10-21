@@ -319,7 +319,7 @@
         <div class="bg-deep-teal text-white p-8 rounded-2xl text-center max-w-4xl mx-auto">
             <p class="text-2xl font-semibold mb-6">You wouldn't pour money into a leaky bucket — yet many businesses treat marketing that way.</p>
             <p class="text-xl mb-8 text-gray-200">That's where we come in.</p>
-            <a href="#process" class="px-8 py-4 bg-orange text-white font-semibold rounded-lg hover:bg-opacity-90 inline-block">Show Me the Fix</a>
+            <a href="#process" class="px-8 py-4 bg-orange text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all">Show Me the Fix</a>
         </div>
     </div>
 </section>
@@ -566,84 +566,6 @@
     </div>
 </section>
 
-<!-- CLIENT TESTIMONIALS SECTION -->
-<section id="testimonials" class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <span class="px-4 py-2 bg-orange/10 text-orange rounded-full text-sm font-semibold">OUR RESULTS</span>
-            <h2 class="text-4xl md:text-5xl font-bold text-deep-teal mb-6 mt-6">What our client's say about Zinara Digital</h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our clients share their success stories and experiences working with us. Discover how ZINARA DIGITAL has helped businesses achieve their <strong>digital marketing goals</strong> and grow their online presence.</p>
-        </div>
-        
-        <!-- Testimonial Grid -->
-        <div class="grid md:grid-cols-2 gap-8 mb-12">
-            <!-- Medvera Homecare -->
-            <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-deep-teal mb-2">Medvera Homecare</h3>
-                    <p class="text-gray-600 font-semibold">Healthcare Services | Nairobi</p>
-                </div>
-                <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
-                    "Working with Zinara Digital transformed how families find our care. Their <strong>social media work, customer care, and online reputation management</strong> amplified our message, increased trust, and helped us connect with more families through prompt, compassionate support."
-                </p>
-                <p class="text-deep-teal font-bold">— Medvera Homecare Team</p>
-            </div>
-            
-            <!-- Elan Bags -->
-            <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-deep-teal mb-2">Elan Bags</h3>
-                    <p class="text-gray-600 font-semibold">E-commerce Fashion | Kenya</p>
-                </div>
-                <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
-                    "Zinara Digital lifted our brand visibility beyond expectations. Their <strong>content and social strategy doubled engagement and grew online sales by 250% in three months</strong>, turning our lookbook into a reliable sales channel."
-                </p>
-                <p class="text-deep-teal font-bold">— Bridget Waceke, Managing Director</p>
-            </div>
-            
-            <!-- UrbanTribe Events -->
-            <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-deep-teal mb-2">UrbanTribe Events</h3>
-                    <p class="text-gray-600 font-semibold">Events & Experiences | Nairobi</p>
-                </div>
-                <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
-                    "Zinara Digital <strong>sold out three major events</strong> with targeted campaigns and automation. We <strong>reduced admin time by 60%</strong> and could focus on the event experience."
-                </p>
-                <p class="text-deep-teal font-bold">— Joseph Mwangi, Founder</p>
-            </div>
-            
-            <!-- GlamFix Beauty Parlour -->
-            <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-bold text-deep-teal mb-2">GlamFix Beauty Parlour</h3>
-                    <p class="text-gray-600 font-semibold">Beauty & Wellness | Nairobi</p>
-                </div>
-                <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
-                    "Zinara's digital overhaul <strong>boosted our monthly clients by 40% and streamlined bookings with automation</strong>, making daily operations much smoother."
-                </p>
-                <p class="text-deep-teal font-bold">— Azma Suleiman, Operations Manager</p>
-            </div>
-        </div>
-        
-        <!-- Overall Stats -->
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-            <div class="text-center p-8 bg-gradient-to-br from-orange to-orange/80 rounded-2xl text-white">
-                <div class="text-5xl font-bold mb-2">50+</div>
-                <div class="text-lg">Businesses Grown</div>
-            </div>
-            <div class="text-center p-8 bg-gradient-to-br from-sea-blue to-aqua rounded-2xl text-white">
-                <div class="text-5xl font-bold mb-2">250%</div>
-                <div class="text-lg">Average Revenue Increase</div>
-            </div>
-            <div class="text-center p-8 bg-gradient-to-br from-deep-teal to-sea-blue rounded-2xl text-white">
-                <div class="text-5xl font-bold mb-2">98%</div>
-                <div class="text-lg">Client Retention Rate</div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- OUR WORK SECTION -->
 <section id="ourwork" class="py-16 md:py-24 bg-gradient-to-b from-white to-blush">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -738,6 +660,109 @@
         
         <div class="text-center">
             <a href="#contact" class="px-10 py-5 bg-orange text-white font-bold text-lg rounded-lg hover:bg-opacity-90 inline-block shadow-lg">Let's Create Your Success Story →</a>
+        </div>
+    </div>
+</section>
+
+<!-- CLIENT TESTIMONIALS SECTION -->
+<section id="testimonials" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="px-4 py-2 bg-orange/10 text-orange rounded-full text-sm font-semibold">OUR RESULTS</span>
+            <h2 class="text-4xl md:text-5xl font-bold text-deep-teal mb-6 mt-6">What our client's say about Zinara Digital</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our clients share their success stories and experiences working with us. Discover how ZINARA DIGITAL has helped businesses achieve their digital marketing goals and grow their online presence.</p>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden">
+            <div class="carousel flex transition-transform duration-500 ease-in-out" id="testimonial-carousel">
+                <!-- Testimonial 1 -->
+                <div class="flex-shrink-0 w-full">
+                    <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange max-w-4xl mx-auto">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold text-deep-teal mb-2">Medvera Homecare</h3>
+                            <p class="text-gray-600 font-semibold">Healthcare Services | Nairobi</p>
+                        </div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                            "Working with Zinara Digital transformed how families find our care. Their social media work, customer care, and online reputation management amplified our message, increased trust, and helped us connect with more families through prompt, compassionate support."
+                        </p>
+                        <p class="text-deep-teal font-bold">— Medvera Homecare Team</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="flex-shrink-0 w-full">
+                    <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange max-w-4xl mx-auto">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold text-deep-teal mb-2">Elan Bags</h3>
+                            <p class="text-gray-600 font-semibold">E-commerce Fashion | Kenya</p>
+                        </div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                            "Zinara Digital lifted our brand visibility beyond expectations. Their content and social strategy doubled engagement and grew online sales by 250% in three months, turning our lookbook into a reliable sales channel."
+                        </p>
+                        <p class="text-deep-teal font-bold">— Bridget Waceke, Managing Director</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="flex-shrink-0 w-full">
+                    <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange max-w-4xl mx-auto">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold text-deep-teal mb-2">UrbanTribe Events</h3>
+                            <p class="text-gray-600 font-semibold">Events & Experiences | Nairobi</p>
+                        </div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                            "Zinara Digital sold out three major events with targeted campaigns and automation. We reduced admin time by 60% and could focus on the event experience."
+                        </p>
+                        <p class="text-deep-teal font-bold">— Joseph Mwangi, Founder</p>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="flex-shrink-0 w-full">
+                    <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange max-w-4xl mx-auto">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold text-deep-teal mb-2">GlamFix Beauty Parlour</h3>
+                            <p class="text-gray-600 font-semibold">Beauty & Wellness | Nairobi</p>
+                        </div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                            "Zinara's digital overhaul boosted our monthly clients by 40% and streamlined bookings with automation, making daily operations much smoother."
+                        </p>
+                        <p class="text-deep-teal font-bold">— Azma Suleiman, Operations Manager</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation buttons -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-100" onclick="prevSlide()">
+                <svg class="w-6 h-6 text-deep-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-100" onclick="nextSlide()">
+                <svg class="w-6 h-6 text-deep-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            <!-- Indicators -->
+            <div class="flex justify-center mt-8">
+                <button class="w-3 h-3 rounded-full bg-orange mx-1" onclick="goToSlide(0)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 mx-1" onclick="goToSlide(1)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 mx-1" onclick="goToSlide(2)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 mx-1" onclick="goToSlide(3)"></button>
+            </div>
+        </div>
+
+        <!-- Overall Stats -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12 mt-16">
+            <div class="text-center p-8 bg-gradient-to-br from-orange to-orange/80 rounded-2xl text-white">
+                <div class="text-5xl font-bold mb-2">50+</div>
+                <div class="text-lg">Businesses Grown</div>
+            </div>
+            <div class="text-center p-8 bg-gradient-to-br from-sea-blue to-aqua rounded-2xl text-white">
+                <div class="text-5xl font-bold mb-2">250%</div>
+                <div class="text-lg">Average Revenue Increase</div>
+            </div>
+            <div class="text-center p-8 bg-gradient-to-br from-deep-teal to-sea-blue rounded-2xl text-white">
+                <div class="text-5xl font-bold mb-2">98%</div>
+                <div class="text-lg">Client Retention Rate</div>
+            </div>
         </div>
     </div>
 </section>
@@ -863,7 +888,7 @@
                 </button>
                 <div id="faq-1" class="hidden px-8 pb-6">
                     <p class="text-gray-700 text-lg leading-relaxed pt-4 border-t-2 border-blush">
-                        With our "Quick Wins" audit, you'll get actionable fixes within 7 days. Most clients see measurable lift in 30-60 days. Sustainable, compounding growth becomes evident after 90 days of consistent optimization.
+                        With our Quick Wins audit, you'll get actionable fixes within 7 days. Most clients see measurable lift in 30-60 days. Sustainable, compounding growth becomes evident after 90 days of consistent optimization.
                     </p>
                 </div>
             </div>
@@ -1064,6 +1089,48 @@
 </footer>
 
 <script>
+// Testimonials carousel
+let currentSlide = 0;
+const slides = document.querySelectorAll('#testimonial-carousel > div');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    const carousel = document.getElementById('testimonial-carousel');
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+    updateIndicators(index);
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+}
+
+function updateIndicators(activeIndex) {
+    const indicators = document.querySelectorAll('#testimonials .flex.justify-center button');
+    indicators.forEach((indicator, index) => {
+        if (index === activeIndex) {
+            indicator.classList.add('bg-orange');
+            indicator.classList.remove('bg-gray-300');
+        } else {
+            indicator.classList.add('bg-gray-300');
+            indicator.classList.remove('bg-orange');
+        }
+    });
+}
+
+// Auto slide every 5 seconds
+setInterval(nextSlide, 5000);
+
 // Mobile menu toggle
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
