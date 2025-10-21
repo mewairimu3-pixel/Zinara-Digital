@@ -676,17 +676,58 @@
         <!-- Carousel Container -->
         <div class="relative overflow-hidden">
             <div class="carousel flex transition-transform duration-500 ease-in-out" id="testimonial-carousel">
-                <!-- Testimonial 1 -->
+                <!-- Slide 1 -->
                 <div class="flex-shrink-0 w-full">
-                    <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange max-w-4xl mx-auto">
-                        <div class="mb-6">
-                            <h3 class="text-2xl font-bold text-deep-teal mb-2">Medvera Homecare</h3>
-                            <p class="text-gray-600 font-semibold">Healthcare Services | Nairobi</p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Testimonial 1 -->
+                        <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange">
+                            <div class="mb-6">
+                                <h3 class="text-2xl font-bold text-deep-teal mb-2">Medvera Homecare</h3>
+                                <p class="text-gray-600 font-semibold">Healthcare Services | Nairobi</p>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                                "Working with Zinara Digital transformed how families find our care. Their social media work, customer care, and online reputation management amplified our message, increased trust, and helped us connect with more families through prompt, compassionate support."
+                            </p>
+                            <p class="text-deep-teal font-bold">— Medvera Homecare Team</p>
                         </div>
-                        <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
-                            "Working with Zinara Digital transformed how families find our care. Their social media work, customer care, and online reputation management amplified our message, increased trust, and helped us connect with more families through prompt, compassionate support."
-                        </p>
-                        <p class="text-deep-teal font-bold">— Medvera Homecare Team</p>
+                        <!-- Testimonial 2 -->
+                        <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange">
+                            <div class="mb-6">
+                                <h3 class="text-2xl font-bold text-deep-teal mb-2">Elan Bags</h3>
+                                <p class="text-gray-600 font-semibold">E-commerce Fashion | Kenya</p>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                                "Zinara Digital lifted our brand visibility beyond expectations. Their content and social strategy doubled engagement and grew online sales by 250% in three months, turning our lookbook into a reliable sales channel."
+                            </p>
+                            <p class="text-deep-teal font-bold">— Bridget Waceke, Managing Director</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="flex-shrink-0 w-full">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Testimonial 3 -->
+                        <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange">
+                            <div class="mb-6">
+                                <h3 class="text-2xl font-bold text-deep-teal mb-2">UrbanTribe Events</h3>
+                                <p class="text-gray-600 font-semibold">Events & Experiences | Nairobi</p>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                                "Zinara Digital sold out three major events with targeted campaigns and automation. We reduced admin time by 60% and could focus on the event experience."
+                            </p>
+                            <p class="text-deep-teal font-bold">— Joseph Mwangi, Founder</p>
+                        </div>
+                        <!-- Testimonial 4 -->
+                        <div class="bg-gradient-to-br from-blush to-white p-8 rounded-2xl shadow-xl border-l-4 border-orange">
+                            <div class="mb-6">
+                                <h3 class="text-2xl font-bold text-deep-teal mb-2">GlamFix Beauty Parlour</h3>
+                                <p class="text-gray-600 font-semibold">Beauty & Wellness | Nairobi</p>
+                            </div>
+                            <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                                "Zinara's digital overhaul boosted our monthly clients by 40% and streamlined bookings with automation, making daily operations much smoother."
+                            </p>
+                            <p class="text-deep-teal font-bold">— Azma Suleiman, Operations Manager</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -698,12 +739,13 @@
             </button>
             <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-2 hover:bg-gray-100" onclick="nextSlide()">
                 <svg class="w-6 h-6 text-deep-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l-7 7 7 7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
             </button>
             <!-- Indicators -->
             <div class="flex justify-center mt-8">
                 <button class="w-3 h-3 rounded-full bg-orange mx-1" onclick="goToSlide(0)"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-300 mx-1" onclick="goToSlide(1)"></button>
             </div>
         </div>
 
@@ -1086,8 +1128,8 @@ function updateIndicators(activeIndex) {
     });
 }
 
-// Auto slide every 5 seconds
-setInterval(nextSlide, 5000);
+// Auto slide every 4 seconds
+setInterval(nextSlide, 4000);
 
 // Mobile menu toggle
 function toggleMobileMenu() {
