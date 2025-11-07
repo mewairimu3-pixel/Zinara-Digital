@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Digital Marketing Blog | Zinara Digital | SEO Tips, Growth Strategies & Marketing Insights</title>
+    <meta name="description" content="Read expert digital marketing insights, SEO tips, and growth strategies from Zinara Digital. Learn how to increase leads and optimize your marketing campaigns.">
+    <meta name="keywords" content="digital marketing blog, SEO tips, marketing strategies, lead generation, conversion optimization, content marketing, social media marketing">
+    <meta name="author" content="Zinara Digital Marketing">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zinara-digital.com/blogs">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zinara-digital.com/blogs">
+    <meta property="og:title" content="Digital Marketing Blog | Zinara Digital">
+    <meta property="og:description" content="Expert digital marketing insights and strategies from Zinara Digital.">
+    <meta property="og:locale" content="en_KE">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../zinara-styles.css">
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #00043f;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Standardized Text Colors */
+        h1, h2, h3, h4, h5, h6 {
+            color: #2B2B2B !important;
+        }
+
+        p, span, li, label {
+            color: #666666 !important;
+        }
+
+        a {
+            color: #122B68 !important;
+        }
+
+        a:hover {
+            color: #FF6B35 !important;
+        }
+
+        .text-white {
+            color: white !important;
+        }
+
+        .text-orange {
+            color: #FF6B35 !important;
+        }
+
+        .text-deep-teal {
+            color: #2B2B2B !important;
+        }
+
+        /* Blog Card Hover */
+        .blog-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .blog-card:hover {
+            background-color: #122B68 !important;
+            color: white;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 48, 63, 0.15);
+        }
+
+        .blog-card:hover h3,
+        .blog-card:hover p,
+        .blog-card:hover .read-more {
+            color: white !important;
+        }
+
+        .blog-card:hover .category-badge {
+            background-color: #FF6B35;
+            color: white;
+        }
+
+        /* Category Badge */
+        .category-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: #122B68;
+            color: white;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        /* Read More Link */
+        .read-more {
+            color: #122B68;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #FF6B35;
+            transform: translateX(4px);
+        }
+
+        /* Header Navigation */
+        .nav-link {
+            color: #666666;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #122B68;
+        }
+
+        /* Hero Section */
+        .blog-hero {
+            background: linear-gradient(135deg, #00043f 0%, #122B68 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        /* Search Bar */
+        .search-input {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 12px 16px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #122B68;
+            box-shadow: 0 0 0 3px rgba(18, 43, 104, 0.1);
+        }
+
+        /* Filter Tags */
+        .filter-tag {
+            padding: 8px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            color: #666666;
+        }
+
+        .filter-tag:hover,
+        .filter-tag.active {
+            background-color: #122B68;
+            color: white;
+            border-color: #122B68;
+        }
+
+        /* Pagination */
+        .pagination-btn {
+            padding: 10px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            color: #666666;
+        }
+
+        .pagination-btn:hover,
+        .pagination-btn.active {
+            background-color: #122B68;
+            color: white;
+            border-color: #122B68;
+        }
+
+        /* Featured Blog */
+        .featured-blog {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-radius: 20px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .featured-blog {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: #00043f;
+            color: white;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #FF6B35;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center">
+                    <span class="text-2xl font-bold text-deep-teal">ZINARA <span class="text-orange">DIGITAL</span></span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#process" class="nav-link">Services</a>
+                    <a href="blogs.html" class="nav-link font-semibold text-deep-teal">Blog</a>
+                    <a href="index.html#contact" class="px-8 py-4 bg-orange text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all shadow-lg">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Digital Marketing Insights</h1>
+            <p class="text-xl text-gray-100 mb-8">Expert strategies, actionable tips, and proven tactics to grow your business</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto">
+                <input type="text" id="searchInput" class="search-input w-full" placeholder="Search articles...">
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tags -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button class="filter-tag active" onclick="filterBlogs('all')">All Articles</button>
+                <button class="filter-tag" onclick="filterBlogs('seo')">SEO</button>
+                <button class="filter-tag" onclick="filterBlogs('ppc')">PPC & Ads</button>
+                <button class="filter-tag" onclick="filterBlogs('social')">Social Media</button>
+                <button class="filter-tag" onclick="filterBlogs('conversion')">Conversion</button>
+                <button class="filter-tag" onclick="filterBlogs('strategy')">Strategy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog -->
+    <section class="py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="featured-blog">
+                <div>
+                    <span class="category-badge">Featured</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">The Complete Guide to SEO in 2025</h2>
+                    <p class="text-lg text-gray-600 mb-6">Learn the latest SEO strategies that actually work. From technical SEO to content optimization, discover what Google really wants from your website.</p>
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-sm text-gray-500">By Zinara Team</span>
+                        <span class="text-sm text-gray-500">•</span>
+                        <span class="text-sm text-gray-500">5 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read Full Article →</a>
+                </div>
+                <div class="bg-gradient-to-br from-[#122B68] to-[#00043f] rounded-2xl h-64 flex items-center justify-center text-white text-4xl font-bold">
+                    SEO 2025
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="blogsGrid" class="grid md:grid-cols-3 gap-8">
+                <!-- Blog Card 1 -->
+                <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden p-6">
+                    <span class="category-badge">PPC & Ads</span>
+                    <h3 class="text-xl font-bold mb-3">Google Ads ROI: How to Cut Costs by 40%</h3>
+                    <p class="text-gray-600 mb-4">Discover the proven strategies we use to reduce ad spend while increasing conversions for our clients.</p>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-sm text-gray-500">6 min read</span>
+                        <span class="text-sm text-gray-500">•</span>
+                        <span class="text-sm text-gray-500">Nov 2025</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden p-6">
+                    <span class="category-badge">Social Media</span>
+                    <h3 class="text-xl font-bold mb-3">LinkedIn Marketing for B2B Growth</h3>
+                    <p class="text-gray-600 mb-4">Master LinkedIn's algorithm and build a high-performing B2B marketing strategy that generates qualified leads.</p>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-sm text-gray-500">7 min read</span>
+                        <span class="text-sm text-gray-500">•</span>
+                        <span class="text-sm text-gray-500">Nov 2025</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden p-6">
+                    <span class="category-badge">Conversion</span>
+                    <h3 class="text-xl font-bold mb-3">CRO Essentials: 5 Changes That Increase Sales</h3>
+                    <p class="text-gray-600 mb-4">Simple but powerful conversion rate optimization techniques that have increased sales for 100+ businesses.</p>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-sm text-gray-500">5 min read</span>
+                        <span class="text-sm text-gray-500">•</span>
+                        <span class="text-sm text-gray-500">Oct 2025</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+
+                <!-- Blog Card 4 -->
+                <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden p-6">
+                    <span class="category-badge">SEO</span>
+                    <h3 class="text-xl font-bold mb-3">Technical SEO Checklist for 2025</h3>
+                    <p class="text-gray-600 mb-4">Complete technical SEO audit checklist to ensure your website is optimized for search engines and users.</p>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-sm text-gray-500">8 min read</span>
+                        <span class="text-sm text-gray-500">•</span>
+                        <span class="text-sm text-gray-500">Oct 2025</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+
+                <!-- Blog Card 5 -->
+                <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden p-6">
+                    <span class="category-badge">Strategy</span>
+                    <h3 class="text-xl font-bold mb-3">Building Your 90-Day Growth Plan</h3>
+                    <p class="text-gray-600 mb-4">Step-by-step framework to create a comprehensive growth plan that delivers measurable results in 90 days.</p>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-sm text-gray-500">9 min read</span>
+                        <span class="text-sm text-gray-500">•</span>
+                        <span class="text-sm text-gray-500">Oct 2025</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+
+                <!-- Blog Card 6 -->
+                <div class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden p-6">
+                    <span class="category-badge">Social Media</span>
+                    <h3 class="text-xl font-bold mb-3">Instagram Reels Strategy for E-Commerce</h3>
+                    <p class="text-gray-600 mb-4">Leverage Instagram Reels to drive traffic and sales. Learn the content formula that works for e-commerce brands.</p>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-sm text-gray-500">6 min read</span>
+                        <span class="text-sm text-gray-500">•</span>
+                        <span class="text-sm text-gray-500">Sep 2025</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-2">
+                <button class="pagination-btn">Previous</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-[#00043f] to-[#122B68]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Grow Your Business?</h2>
+            <p class="text-xl text-gray-100 mb-8">Let's discuss your marketing challenges and create a custom growth strategy.</p>
+            <a href="index.html#contact" class="px-8 py-4 bg-orange text-white font-bold text-lg rounded-xl hover:bg-yellow-500 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 hover:scale-105 inline-block">
+                Schedule a Free Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ZINARA DIGITAL</h3>
+                    <p class="text-gray-400">Leading digital marketing agency in Nairobi, Kenya.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="index.html#about" class="footer-link">About</a></li>
+                        <li><a href="index.html#process" class="footer-link">Services</a></li>
+                        <li><a href="blogs.html" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">SEO Services</a></li>
+                        <li><a href="#" class="footer-link">PPC Management</a></li>
+                        <li><a href="#" class="footer-link">Social Media</a></li>
+                        <li><a href="#" class="footer-link">Conversion Optimization</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <p class="text-gray-400 mb-2">Email: hello@zinara-digital.com</p>
+                    <p class="text-gray-400">Phone: +254 704 878 872</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Zinara Digital Marketing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function filterBlogs(category) {
+            // Update active filter tag
+            document.querySelectorAll('.filter-tag').forEach(tag => {
+                tag.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Filter logic would go here
+            console.log('Filtering by:', category);
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            console.log('Searching for:', searchTerm);
+            // Search logic would go here
+        });
+    </script>
+
+    <!-- External JavaScript -->
+    <script src="../zinara-script.js"></script>
+</body>
+</html>
