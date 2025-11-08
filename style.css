@@ -1,0 +1,596 @@
+/* ============================================
+   BRAIT CONSULTING DESIGN ENHANCEMENTS
+   Zinara Digital - Enhanced Styles
+   ============================================ */
+
+/* Color Variables */
+:root {
+    --primary-orange: #FF6B35;
+    --primary-teal: #00043f;
+    --secondary-blue: #122B68;
+    --light-blue: #1e40af;
+    --blush: #EDDFE0;
+    --aqua: #03a6a1;
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-duration: 0.5s;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+    }
+    50% {
+        box-shadow: 0 12px 35px rgba(255, 107, 53, 0.5);
+    }
+}
+
+@keyframes shineEffect {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* ============================================
+   SERVICE CARDS - BRAIT STYLE
+   ============================================ */
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 48, 63, 0.08);
+    transition: all var(--transition-duration) var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.7s var(--transition-smooth) forwards;
+    opacity: 0;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-orange) 0%, var(--secondary-blue) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--transition-smooth);
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.08) 0%, rgba(18, 43, 104, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover::after {
+    opacity: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.15);
+}
+
+/* Staggered animation delays for service cards */
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+.service-card:nth-child(7) { animation-delay: 0.7s; }
+.service-card:nth-child(8) { animation-delay: 0.8s; }
+
+/* ============================================
+   PRICING CARDS - BRAIT STYLE
+   ============================================ */
+
+.pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0, 48, 63, 0.08);
+    transition: all var(--transition-duration) var(--transition-smooth);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.7s var(--transition-smooth) forwards;
+    opacity: 0;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.08) 0%, rgba(18, 43, 104, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.pricing-card:hover::before {
+    opacity: 1;
+}
+
+.pricing-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 70px rgba(30, 64, 175, 0.18);
+    border-color: var(--light-blue);
+}
+
+/* Pricing card animation delays */
+.pricing-grid .pricing-card:nth-child(1) { animation-delay: 0.1s; }
+.pricing-grid .pricing-card:nth-child(2) { animation-delay: 0.2s; }
+.pricing-grid .pricing-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* ============================================
+   CASE STUDY / PORTFOLIO CARDS - BRAIT STYLE
+   ============================================ */
+
+.case-card,
+.portfolio-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 48, 63, 0.08);
+    transition: all var(--transition-duration) var(--transition-smooth);
+    position: relative;
+    animation: fadeInUp 0.7s var(--transition-smooth) forwards;
+    opacity: 0;
+}
+
+.case-card::before,
+.portfolio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.08) 0%, rgba(18, 43, 104, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.case-card:hover::before,
+.portfolio-card:hover::before {
+    opacity: 1;
+}
+
+.case-card:hover,
+.portfolio-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 70px rgba(30, 64, 175, 0.18);
+}
+
+/* Case card animation delays */
+.case-grid .case-card:nth-child(1) { animation-delay: 0.1s; }
+.case-grid .case-card:nth-child(2) { animation-delay: 0.2s; }
+.case-grid .case-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Portfolio card animation delays */
+.portfolio-grid .portfolio-card:nth-child(1) { animation-delay: 0.1s; }
+.portfolio-grid .portfolio-card:nth-child(2) { animation-delay: 0.2s; }
+.portfolio-grid .portfolio-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* ============================================
+   TESTIMONIAL CARDS - BRAIT STYLE
+   ============================================ */
+
+.testimonial-card {
+    background: #F9FAFB;
+    border-radius: 16px;
+    padding: 35px;
+    position: relative;
+    transition: all var(--transition-duration) var(--transition-smooth);
+    border-left: 4px solid transparent;
+    animation: fadeInUp 0.7s var(--transition-smooth) forwards;
+    opacity: 0;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    background: white;
+    box-shadow: 0 15px 40px rgba(30, 64, 175, 0.12);
+    border-left-color: var(--light-blue);
+}
+
+/* Testimonial card animation delays */
+.testimonial-grid .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-grid .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-grid .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* ============================================
+   BUTTONS - BRAIT STYLE
+   ============================================ */
+
+.btn-primary {
+    background: var(--primary-orange);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all var(--transition-duration) var(--transition-smooth);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.35);
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    background: var(--light-blue);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 14px 40px rgba(30, 64, 175, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-teal);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid var(--primary-teal);
+    cursor: pointer;
+    transition: all var(--transition-duration) var(--transition-smooth);
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--light-blue);
+    transition: left 0.5s;
+    z-index: -1;
+}
+
+.btn-secondary:hover::before {
+    left: 0;
+}
+
+.btn-secondary:hover {
+    color: white;
+    border-color: var(--light-blue);
+    transform: translateY(-4px);
+}
+
+/* ============================================
+   CONTENT CARDS - BRAIT STYLE
+   ============================================ */
+
+.content-card,
+.feature-card,
+.blog-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 48, 63, 0.08);
+    transition: all var(--transition-duration) var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.7s var(--transition-smooth) forwards;
+    opacity: 0;
+}
+
+.content-card::before,
+.feature-card::before,
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-orange) 0%, var(--light-blue) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--transition-smooth);
+}
+
+.content-card::after,
+.feature-card::after,
+.blog-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.06) 0%, rgba(18, 43, 104, 0.03) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.content-card:hover::before,
+.feature-card:hover::before,
+.blog-card:hover::before {
+    transform: scaleX(1);
+}
+
+.content-card:hover::after,
+.feature-card:hover::after,
+.blog-card:hover::after {
+    opacity: 1;
+}
+
+.content-card:hover,
+.feature-card:hover,
+.blog-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.15);
+}
+
+/* Content card animation delays */
+.content-grid .content-card:nth-child(1) { animation-delay: 0.1s; }
+.content-grid .content-card:nth-child(2) { animation-delay: 0.2s; }
+.content-grid .content-card:nth-child(3) { animation-delay: 0.3s; }
+.content-grid .content-card:nth-child(4) { animation-delay: 0.4s; }
+
+.feature-grid .feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-grid .feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-grid .feature-card:nth-child(3) { animation-delay: 0.3s; }
+
+.blog-grid .blog-card:nth-child(1) { animation-delay: 0.1s; }
+.blog-grid .blog-card:nth-child(2) { animation-delay: 0.2s; }
+.blog-grid .blog-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* ============================================
+   GENERIC CARD CLASS - BRAIT STYLE
+   ============================================ */
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 48, 63, 0.08);
+    transition: all var(--transition-duration) var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-orange) 0%, var(--light-blue) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--transition-smooth);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 64, 175, 0.06) 0%, rgba(18, 43, 104, 0.03) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    transform: scaleX(1);
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(30, 64, 175, 0.15);
+}
+
+/* ============================================
+   HOVER COLOR ACCENT - LIGHT BLUE
+   ============================================ */
+
+.hover-accent:hover {
+    color: var(--light-blue);
+    transition: color var(--transition-duration) var(--transition-smooth);
+}
+
+.border-accent:hover {
+    border-color: var(--light-blue);
+    transition: border-color var(--transition-duration) var(--transition-smooth);
+}
+
+.bg-accent:hover {
+    background-color: rgba(30, 64, 175, 0.1);
+    transition: background-color var(--transition-duration) var(--transition-smooth);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .service-card,
+    .pricing-card,
+    .case-card,
+    .portfolio-card,
+    .testimonial-card,
+    .content-card,
+    .feature-card,
+    .blog-card {
+        padding: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 16px 32px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card,
+    .pricing-card,
+    .case-card,
+    .portfolio-card,
+    .testimonial-card,
+    .content-card,
+    .feature-card,
+    .blog-card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .pricing-card {
+        padding: 30px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 14px 28px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    /* Reduce hover scale on mobile for better touch experience */
+    .service-card:hover,
+    .pricing-card:hover,
+    .case-card:hover,
+    .portfolio-card:hover,
+    .testimonial-card:hover,
+    .content-card:hover,
+    .feature-card:hover,
+    .blog-card:hover,
+    .card:hover {
+        transform: translateY(-6px) scale(1.01);
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .service-card,
+    .pricing-card,
+    .case-card,
+    .portfolio-card,
+    .testimonial-card,
+    .content-card,
+    .feature-card,
+    .blog-card,
+    .card,
+    .btn-primary,
+    .btn-secondary {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Focus states for keyboard navigation */
+.btn-primary:focus,
+.btn-secondary:focus {
+    outline: 2px solid var(--light-blue);
+    outline-offset: 2px;
+}
+
+.card:focus-within {
+    outline: 2px solid var(--light-blue);
+    outline-offset: 2px;
+}
